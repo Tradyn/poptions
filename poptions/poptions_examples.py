@@ -6,21 +6,21 @@ import poptions
 
 ################################################################
 
-underlying = 137.31     # Current underlying price
-short_strike = 145      # Short strike price
-short_price = 1.13      # Short call price
-long_strike = 150
-long_price = 0.4
-rate = 0        # Annualized risk-free rate as a percentage (e.g. 1 year US Treasury Bill rate)
-sigma = 26.8        # Implied Volatility as a percentage
-days_to_expiration = 45     # Calendar days left till expiration
-percentage_array = [20, 30, 40]  # Percentage of maximum profit that will trigger the position to close
-closing_days_array = [21, 22, 23]       # Max calendar days passed until position is closed
-trials = 2000       # Number of independent trials
+#underlying = 137.31     # Current underlying price
+#short_strike = 145      # Short strike price
+#short_price = 1.13      # Short call price
+#long_strike = 150
+#long_price = 0.4
+#rate = 0        # Annualized risk-free rate as a percentage (e.g. 1 year US Treasury Bill rate)
+#sigma = 26.8        # Implied Volatility as a percentage
+#days_to_expiration = 45     # Calendar days left till expiration
+#percentage_array = [20, 30, 40]  # Percentage of maximum profit that will trigger the position to close
+#closing_days_array = [21, 22, 23]       # Max calendar days passed until position is closed
+#trials = 2000       # Number of independent trials
 
-print("Call Credit Spread: ", poptions.callCreditSpread(underlying, sigma, rate, trials, days_to_expiration,
-                                                        closing_days_array, percentage_array, short_strike,
-                                                        short_price, long_strike, long_price))
+#print("Call Credit Spread: ", poptions.callCreditSpread(underlying, sigma, rate, trials, days_to_expiration,
+#                                                        closing_days_array, percentage_array, short_strike,
+#                                                        short_price, long_strike, long_price))
 
 ###############################################################
 
@@ -42,21 +42,21 @@ print("Call Credit Spread: ", poptions.callCreditSpread(underlying, sigma, rate,
 #
 # ###############################################################
 #
-# underlying = 123
-# short_strike = 120
-# short_price = 6.9
-# long_strike = 110
-# long_price = 14.2
-# rate = 0
-# sigma = 29.2
-# days_to_expiration = 48
-# percentage_array = [20]
-# closing_days_array = [48]
-# trials = 2000
-# #
-# print("Call Debit Spread: ", poptions.callDebitSpread(underlying, sigma, rate, trials, days_to_expiration,
-#                                              closing_days_array, percentage_array, short_strike,
-#                                              short_price, long_strike, long_price))
+underlying = 1470
+short_strike = 1850
+short_price = 0.082
+long_strike = 1700
+long_price = 0.1146
+rate = 0
+sigma = 99.2
+days_to_expiration = 33
+percentage_array = [10, 50, 75]
+closing_days_array = [10, 20, 30]
+trials = 2000
+ #
+print("Call Debit Spread: ", poptions.callDebitSpread(underlying, sigma, rate, trials, days_to_expiration,
+                                              closing_days_array, percentage_array, short_strike,
+                                              short_price, long_strike, long_price))
 #
 # ###############################################################
 #
